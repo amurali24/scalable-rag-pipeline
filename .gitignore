@@ -22,3 +22,4 @@ Thumbs.db
 *.tfstate
 *.tfstate.backup
 .terraform/
+*requirements.txt
