@@ -1,11 +1,9 @@
-# services/api/requirements.txt
-
 # Core Framework
 fastapi==0.109.0
 uvicorn[standard]==0.27.0
 pydantic==2.6.0
 pydantic-settings==2.1.0
-simpleeval==0.9.13  # Safe math evaluation
+simpleeval==0.9.13
 
 # Async Database & Cache
 sqlalchemy==2.0.25
@@ -13,11 +11,11 @@ asyncpg==0.29.0
 redis==5.0.1
 
 # AI & LLM Clients
-openai==1.10.0   # Standard client often used for compatible endpoints
-anthropic==0.8.0 # If using Claude fallback
+openai==1.10.0
+anthropic==0.8.0
 tiktoken==0.5.2
 sentence-transformers==2.3.1
-transformers==4.37.0 # For tokenizer templates
+transformers==4.37.0
 
 # Graph & Vector DBs
 neo4j==5.16.0
@@ -26,6 +24,14 @@ qdrant-client==1.7.3
 # Agent Framework
 langchain==0.1.5
 langgraph==0.0.21
+
+# Ray Framework (Matched to Cluster Config)
+ray[default,serve,data]==2.9.0
+
+# Ingestion & Scripts
+unstructured[pdf]==0.12.0
+lxml
+# Note: poppler and tesseract must be installed at system level for PDF parsing
 
 # Observability & Ops
 opentelemetry-api==1.22.0
